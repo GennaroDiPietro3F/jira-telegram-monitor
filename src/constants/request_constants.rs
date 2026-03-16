@@ -26,8 +26,8 @@ pub const JIRA_GET_ISSUES_OPEN_URL: &str = "https://support.rgigroup.com/rest/ap
 
 
 //--- Constanti per richiesta bot Telegram ---
-pub const BOT_ID: &str ="8286856739:AAHieNskeFnTwueas6yWm3MxpwgefuDhquk";
+pub const BOT_ID: &str ="XXX";
 pub const TELEGRAM_API: &str = "https://api.telegram.org/bot";
 pub const CHAT_ID_HEADER : &str = "chat_id";
-pub const CHAT_ID_VALUE: &str = "-1002776145504";
+pub const CHAT_ID_VALUE: &str = "XXX";
 pub const TEXT_HEADER: &str = "text";
