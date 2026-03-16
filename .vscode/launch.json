@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'api_jira_for_tickets'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=api_jira_for_tickets",
+                    "--package=api_jira_for_tickets"
+                ],
+                "filter": {
+                    "name": "api_jira_for_tickets",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'api_jira_for_tickets'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=api_jira_for_tickets",
+                    "--package=api_jira_for_tickets"
+                ],
+                "filter": {
+                    "name": "api_jira_for_tickets",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

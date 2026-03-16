@@ -1,0 +1,2 @@
+// File: app.rc (nella root del progetto)
+IDI_ICON1 ICON "src/assets/computer2.ico"

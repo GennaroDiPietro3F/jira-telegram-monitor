@@ -1,0 +1,21 @@
+[package]
+name = "api_jira_for_tickets"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8.4"
+tokio = { version = "1.46.1", features = ["full"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+reqwest = { version = "0.12.22", features = ["json"] }
+sys-locale = "0.3.2"
+rfd = "0.15.3"
+log = "0.4.28"
+simple-logging = "2.0.2"
+tray-icon = "0.21.1"
+
+[build-dependencies]
+winres = "0.1.12"
+
+
