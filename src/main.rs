@@ -6,29 +6,23 @@ use crate::{constants::common_costants::localized, controller::get_issues::api_g
 mod command;
 mod controller;
 mod utils;
-use std::io::{stdout, Write};
+mod config;
+use config::logger_initializer::setup_logger;
+use log::{info, error, warn};
 
-use log::{info, error, LevelFilter};
-use simple_logging::{log_to_file, log_to};
+
+
+
 
 #[tokio::main]
 async fn main() -> Result<(), reqwest::Error> {
 
-
-    let log_file_path = "app_issues.log"; 
-
-    log_to(std::io::stdout(),LevelFilter::Info);
-    info!("Log in console avviato con successo");
-    stdout().flush().unwrap();
-    
-    #[cfg_attr(not(debug_assertions), windows_subsystem = "windows")] 
-    match log_to_file(log_file_path, LevelFilter::Info) {
-        Ok(_) => info!("Logger inizializzato con successo. I messaggi saranno scritti in {}", log_file_path),
-        Err(e) => {
-            error!("Errore nell'inizializzazione del logger: {}", e);
-            return Ok(());
-        }
+     if let Err(e) = setup_logger() {
+        eprintln!("Errore inizializzazione logger: {}", e);
+        return Ok(());
     }
+
+    info!("Logger inizializzato — stdout + file attivi");
 
 #[cfg_attr(not(debug_assertions), windows_subsystem = "windows")] 
     loop {

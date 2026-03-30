@@ -12,8 +12,10 @@ reqwest = { version = "0.12.22", features = ["json"] }
 sys-locale = "0.3.2"
 rfd = "0.15.3"
 log = "0.4.28"
-simple-logging = "2.0.2"
 tray-icon = "0.21.1"
+fern = { version = "0.7", features = ["colored"] }
+chrono = "0.4"
+colored = "2"
 
 [build-dependencies]
 winres = "0.1.12"
