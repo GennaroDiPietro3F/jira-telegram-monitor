@@ -3,7 +3,9 @@ use crate::models::user_data::user::User;
 use reqwest::Error;
 pub async fn api_get_issues() -> Result<String, Error> {
     let utente = User::get_utente_from_json();
-    let client = reqwest::Client::new();
+    let client = reqwest::Client::builder()
+        .danger_accept_invalid_certs(true)
+        .build()?;
     let response = client
         .get(JIRA_GET_ISSUES_OPEN_URL)
         .query(&QUERY_PARAMS_JIRA_ISSUES)

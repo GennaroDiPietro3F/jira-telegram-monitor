@@ -1,7 +1,7 @@
 
 // --- Costanti per i parametri di query ---
 pub const JQL_PARAM_KEY: &str = "jql";
-pub const JQL_QUERY_VALUE: &str = "project = GLBAM AND status in (Open, Reopened, \"Waiting for customer\", Pending, \"Work in progress\", Resolution, \"Take in Charge\", \"Approved by Customer\", \"Not Certified\", Estimated, Accepted, Planned, Evaluation, \"Customer certification\")";
+pub const JQL_QUERY_VALUE: &str = "project = GLBAM AND squad in (\"ServiceDesk 3F\", \"P&C-CLAIMS 3F\") AND status in (Open, Reopened, \"Waiting for customer\", Pending, \"Work in progress\", Resolution, \"Take in Charge\", \"Approved by Customer\", \"Not Certified\", Estimated, Accepted, Planned, Evaluation, \"Customer certification\")";
 pub const MAX_RESULTS_PARAM_KEY: &str = "maxResults";
 pub const MAX_RESULTS_VALUE: &str = "500";
 
@@ -26,8 +26,8 @@ pub const JIRA_GET_ISSUES_OPEN_URL: &str = "https://support.rgigroup.com/rest/ap
 
 
 //--- Constanti per richiesta bot Telegram ---
-pub const BOT_ID: &str ="XXX";
+pub const BOT_ID: &str ="8286856739:AAHieNskeFnTwueas6yWm3MxpwgefuDhquk";
 pub const TELEGRAM_API: &str = "https://api.telegram.org/bot";
 pub const CHAT_ID_HEADER : &str = "chat_id";
-pub const CHAT_ID_VALUE: &str = "XXX";
+pub const CHAT_ID_VALUE: &str = "-1002776145504";
 pub const TEXT_HEADER: &str = "text";

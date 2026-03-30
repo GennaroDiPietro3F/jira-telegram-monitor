@@ -6,15 +6,20 @@ use crate::{constants::common_costants::localized, controller::get_issues::api_g
 mod command;
 mod controller;
 mod utils;
+use std::io::{stdout, Write};
 
 use log::{info, error, LevelFilter};
-use simple_logging::log_to_file;
+use simple_logging::{log_to_file, log_to};
 
 #[tokio::main]
 async fn main() -> Result<(), reqwest::Error> {
 
 
     let log_file_path = "app_issues.log"; 
+
+    log_to(std::io::stdout(),LevelFilter::Info);
+    info!("Log in console avviato con successo");
+    stdout().flush().unwrap();
     
     #[cfg_attr(not(debug_assertions), windows_subsystem = "windows")] 
     match log_to_file(log_file_path, LevelFilter::Info) {
